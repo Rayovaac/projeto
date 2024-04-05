@@ -1,13 +1,16 @@
- let x=Number=(prompt ("Digite um número de dois dígitos menor que 100): ")
+ let numero = parseInt(prompt("Digite um número menor que 100:"));
 
- if(x>=100){
- window.alert ("Núnero inválido")
- }
- else{
- dezena=x/10
- unidade=x*10
- soma=dezena+unidade
- soma=parseInt (soma)
- window.alert("A soma dos dígitos é: "+soma )
+if (numero >= 0 && numero < 100) {
+
+    let dezena = Math.floor(numero / 10);
+    let unidade = numero % 10;
    
+
+    let soma = dezena + unidade;
+
+    console.log("A soma dos dígitos do número " + numero + " é: " + soma);
+}
+else {
+   
+    console.log("Número inválido. Insira um número menor que 100.");
 }
